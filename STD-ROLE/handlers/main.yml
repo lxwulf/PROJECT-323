@@ -1,5 +1,5 @@
 ---
-# handlers file for CW-STD-ROLE
+# handlers file for STD-ROLE
 
 - name: restart machine
   reboot:

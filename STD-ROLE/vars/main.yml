@@ -1,5 +1,5 @@
 ---
-# vars file for CW-STD-ROLE
+# vars file for STD-ROLE
 
 # package list for the std installation
 packages:
