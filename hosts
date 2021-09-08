@@ -1,0 +1,11 @@
+# My PRO-KVM-01 VM Server Environment
+
+[dev]
+terraform
+ansible
+
+[pro]
+team0
+
+[tes]
+tes0

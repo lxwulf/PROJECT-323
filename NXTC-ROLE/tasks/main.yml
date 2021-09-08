@@ -1,0 +1,7 @@
+---
+# tasks file for CW-STD-ROLE
+
+- name: import tasks
+  include_tasks: "{{ items }}"
+  with_items:
+    - template-role-name

@@ -1,0 +1,13 @@
+---
+
+- name: remove unused packages
+  dnf:
+    name: python-unversioned-command
+    state: absent
+  become: yes
+
+- name: installing standard packages
+  ansible.builtin.package:
+    name: "{{ packages }}"
+    state: present
+  become: yes

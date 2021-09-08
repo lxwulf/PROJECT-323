@@ -1,0 +1,6 @@
+---
+# handlers file for CW-STD-ROLE
+
+- name: restart machine
+  reboot:
+  become: yes

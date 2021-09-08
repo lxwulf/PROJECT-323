@@ -1,0 +1,18 @@
+---
+# vars file for CW-STD-ROLE
+
+# package list for the std installation
+packages:
+  - git
+  - wget
+  - tree
+  - htop
+  - vim
+  - NetworkManager-tui
+  - unzip
+  - curl
+  - bash-completion
+  - mlocate
+  - zip
+  - p7zip
+  - unzip

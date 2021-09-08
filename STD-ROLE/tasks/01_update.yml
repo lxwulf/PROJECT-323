@@ -1,0 +1,9 @@
+---
+
+- name: update packages
+  dnf:
+    name: "*"
+    state: latest
+  become: yes
+  notify:
+    - restart machine
