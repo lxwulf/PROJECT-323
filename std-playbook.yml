@@ -1,6 +1,6 @@
 ---
 
-- name: setup standard installation
+- name: SET UP STANDARD INSTALLATION
   hosts: "{{ target }}"
   strategy: mitogen_linear
   roles:
