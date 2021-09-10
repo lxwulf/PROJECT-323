@@ -26,3 +26,23 @@
     state: present
     reload: yes
   become: yes
+
+- name: adding the hostname into hosts (ipv4)
+  ansible.builtin.lineinfile:
+    path: /etc/hosts
+    regexp: '^127\.0\.0\.1'
+    line: 127.0.0.1 {{ ansible_hostname }}
+    owner: root
+    group: root
+    mode: '0644'
+  become: yes
+
+- name: adding the hostname into hosts (ipv6)
+  ansible.builtin.lineinfile:
+    path: /etc/hosts
+    regexp: '^::1'
+    line: ::1 {{ ansible_hostname }}
+    owner: root
+    group: root
+    mode: '0644'
+  become: yes
