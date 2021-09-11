@@ -16,3 +16,5 @@ packages:
   - zip
   - p7zip
   - unzip
+  - bzip2
+  - xrdb
