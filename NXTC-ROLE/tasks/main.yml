@@ -1,7 +1,8 @@
 ---
-# tasks file for CW-STD-ROLE
+# tasks file for STD-ROLE
 
 - name: import tasks
-  include_tasks: "{{ items }}"
+  include_tasks: "{{ item }}"
   with_items:
-    - template-role-name
+    - 01_modify_hostname.yml
+
