@@ -1,4 +1,5 @@
 PLUGINS
 .vscode/
 group_vars
-Template*
+Temp*
+pyapps
