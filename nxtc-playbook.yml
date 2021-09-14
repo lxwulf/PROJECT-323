@@ -1,6 +1,6 @@
 ---
 
-- name: setup standard installation
+- name: SETUP NXTC-ROLE
   hosts: "{{ target }}"
   strategy: mitogen_linear
   roles:
