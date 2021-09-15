@@ -3,4 +3,4 @@ PLUGINS
 group_vars
 Temp*
 pyapps
-vars
+NXTC-ROLE/vars/main.yml
