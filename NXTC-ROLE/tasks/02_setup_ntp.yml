@@ -1,0 +1,17 @@
+---
+
+- name: adding ntp servers
+  ansible.builtin.lineinfile:
+    path: /etc/systemd/timesyncd.conf
+    regexp: '^#NTP='
+    line: NTP={{ ntp_server0 }} {{ ntp_server1 }} {{ ntp_server2 }} {{ ntp_server3 }}
+    owner: root
+    group: root
+    mode: '0644'
+  become: yes
+
+- name: restart timesync service
+  ansible.builtin.systemd:
+    name: systemd-timesyncd
+    state: restarted
+  become: yes
