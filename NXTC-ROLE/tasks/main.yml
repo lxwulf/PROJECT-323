@@ -1,8 +1,9 @@
 ---
-# tasks file for STD-ROLE
+# main task file for NXTC-ROLE
 
 - name: import tasks
   include_tasks: "{{ item }}"
   with_items:
-    - 01_modify_hostname.yml
+    - 01_setup_hostnames.yml
+    - 02_setup_ntp.yml
 
