@@ -1,6 +1,9 @@
 ---
 # vars file for STD-ROLE
 
+#host group
+target: tes
+
 # package list for the std installation
 packages:
   - git
