@@ -5,12 +5,11 @@ It also upgrades the machines and deactivate ipv6 support to remove some possibl
 
 ## Requirements
 
-The only requirements are mitogen plugin and a linux os like fedora.
+The only requirements are the mitogen plugin and a linux os like fedora.
 
 ## Role Variables
 
-The role variables are in `STD-ROLE/vars/main.yml`. The host variable are in my ssh-config file and in `STD-ROLE/group_vars/dev.yml` which is not included. You can setup your own file which must have the same name as the group defined in the `hosts` file.
-The `target` variable in the playbook(s) are always the for the command line option `--extra-vars`.
+The role variables are in `STD-ROLE/vars/main.yml`.
 
 ### Example
 
@@ -55,8 +54,17 @@ There are no dependencies. All special modules should be provided by ansible its
 
 ## Example Playbook
 
-So far no special variable are declared within command line. But you can expand or modify
-the package list as you want under `STD-ROLE/vars/main.yml`.
+This is the playbook itself of this particular role
+
+```yml
+---
+
+- name: SET UP STANDARD INSTALLATION
+  hosts: "{{ target }}"
+  strategy: mitogen_linear
+  roles:
+  - STD-ROLE
+```
 
 ## Author Information
 
