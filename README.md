@@ -11,8 +11,8 @@ that these roles are useful for you.
 ## What is when I'm brave enough?
 
 No one would stop you from trying. Keep in mind to look into the `var` folder of each `*-ROLE` folder
-for proper configuration of the `*-ROLE` itself. Don't forget the `group_vars` folder, which you need to
-make by your own, and it's not included in this repo. More information in the `*-ROLE` folders itself.
+for proper configuration of the `*-ROLE` itself. The host variable are in my ssh-config file and in `./group_vars/hostgroupname.yml`
+which is not included. You can setup your own file which must have the same name as the group defined in the `hosts` file.
 Also, you should expect to do more configuration as I need to do because I had set up it for my environment.
 
 ## What kind of environment are you talking about?
