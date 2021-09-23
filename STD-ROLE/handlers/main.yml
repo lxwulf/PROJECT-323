@@ -1,6 +1,6 @@
 ---
-# handlers file for STD-ROLE
 
+#handler for 01_update.yml
 - name: restart machine
   reboot:
   become: yes
