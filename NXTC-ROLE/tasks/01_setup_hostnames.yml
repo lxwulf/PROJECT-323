@@ -24,7 +24,7 @@
   ansible.builtin.lineinfile:
     path: /etc/hosts
     insertafter: '^::1'
-    line: "{{ realip }} {{ fqdn_name }}"
+    line: "{{ extip }} {{ fqdn_name }}"
     owner: root
     group: root
     mode: '0644'
