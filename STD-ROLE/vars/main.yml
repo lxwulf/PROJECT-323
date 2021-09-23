@@ -21,3 +21,4 @@ packages:
   - unzip
   - bzip2
   - xrdb
+  - tmux
