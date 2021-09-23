@@ -1,12 +1,5 @@
 ---
 
-- name: enable autostart for nginx
-  ansible.builtin.systemd:
-    name: nginx
-    enabled: yes
-    state: stopped
-  become: yes
-
 - name: creating user www-data for nginx
   ansible.builtin.user:
     name: www-data
@@ -34,4 +27,11 @@
     owner: root
     group: root
     mode: '0644'
+  become: yes
+
+- name: starting nginx
+  ansible.builtin.systemd:
+    name: nginx
+    enabled: yes
+    state: started
   become: yes
