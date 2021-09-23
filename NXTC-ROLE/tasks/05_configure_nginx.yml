@@ -12,7 +12,10 @@
     name: www-data
     shell: /bin/bash
     uid: 1001
-    
+    create_home: false
+    update_password: on_create
+    password: "{{ custom_pw | password_hash('sha512') }}"
+  become: yes
 
 - name: make backup of nginx-config
   ansible.builtin.copy:
@@ -32,4 +35,3 @@
     group: root
     mode: '0644'
   become: yes
-
