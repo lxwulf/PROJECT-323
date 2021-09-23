@@ -1,1 +1,9 @@
 ---
+
+#handler for 02_setup_ntp.yml
+- name: restart timesyncd
+  ansible.builtin.systemd:
+    name: systemd-timesyncd
+    state: restarted
+  when: ntp_configuration.changed
+  become: yes
