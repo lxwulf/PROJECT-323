@@ -8,10 +8,7 @@
     owner: root
     group: root
     mode: '0644'
+  register: ntp_configuration
   become: yes
-
-- name: restart timesync service
-  ansible.builtin.systemd:
-    name: systemd-timesyncd
-    state: restarted
-  become: yes
+  notify:
+    - restart timesyncd
