@@ -1,13 +1,13 @@
 ---
 
 - name: remove unused packages
-  package:
+  dnf:
     name: python-unversioned-command
     state: absent
   become: yes
 
 - name: installing standard packages
-  package:
+  dnf:
     name: "{{ packages }}"
     state: present
   become: yes
