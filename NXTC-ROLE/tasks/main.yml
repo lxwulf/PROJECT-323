@@ -9,3 +9,4 @@
     - 03_setup_ntp.yml
     - 04_installing_packages.yml
     - 05_configure_nginx.yml
+    - 06_configure_php.yml
