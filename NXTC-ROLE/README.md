@@ -1,6 +1,6 @@
 # NXTC-ROLE
 
-This is the role for automated installation of Nextcloud. The role set up Nextcloud with `PHP 7.4`, `MariaDB 10.6`, `Redis`,
+This is the role for automated installation of Nextcloud. The role set up Nextcloud with `PHP 7.4`, `PostgresSQL 13.4`, `Redis`,
 `fail2ban` and `firewall-cmd`. At the end, you should have a working, secured cloud server with the logins you defined in the variables.
 
 ## Requirements
