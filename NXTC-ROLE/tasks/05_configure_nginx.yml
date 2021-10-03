@@ -6,8 +6,15 @@
     shell: /bin/bash
     uid: 1001
     create_home: false
-    update_password: on_create
-    password: "{{ custom_pw | password_hash('sha512') }}"
+  become: yes
+
+- name: copy template config to remote-host
+  ansible.builtin.template:
+    src: templates/nginx/nginx.conf.j2
+    dest: /etc/nginx/nginx.conf
+    owner: root
+    group: root
+    mode: '0644'
   become: yes
 
 - name: make backup of nginx-config
@@ -20,18 +27,14 @@
     mode: '0644'
   become: yes
 
-- name: copy template config to remote-host
-  ansible.builtin.template:
-    src: templates/nginx.conf.j2
-    dest: /etc/nginx/nginx.conf
-    owner: root
-    group: root
-    mode: '0644'
+- name: create folders for nxtc and certificates
+  ansible.builtin.file:
+    path: "{{ cm_pathlist }}"
+    owner: www-data
+    group: www-data
+    mode: '0751'
+    state: directory
   become: yes
-
-- name: starting nginx
-  ansible.builtin.systemd:
-    name: nginx
-    enabled: yes
-    state: started
-  become: yes
+  loop: "{{ custom_pathlist }}"
+  loop_control:
+    loop_var: cm_pathlist
