@@ -5,7 +5,7 @@
   include_tasks: "{{ item }}"
   loop:
     - 01_setup_hostnames.yml
-    - 02_configfw.yml
+    - 02_configure_firewall.yml
     - 03_setup_ntp.yml
     - 04_installing_packages.yml
     - 05_configure_nginx.yml
