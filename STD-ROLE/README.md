@@ -23,6 +23,7 @@ ansible
 ./group_vars/dev.yml
 
 ```yml
+---
 #user std logins
 ansible_user: yourusername_of_the_remote_machine
 ansible_ssh_pass: your_password_of_the_remote_machine
@@ -41,7 +42,7 @@ host ansible
 
 The variables for the `--extra-vars` are used in the following way:
 
-```yml
+```bash
 ansible-playbook std-playbook.yml --extra-vars target=pro
 ```
 
