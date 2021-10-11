@@ -4,3 +4,4 @@ group_vars
 Temp*
 pyapps
 NXTC-ROLE/vars/main.yml
+host_facts
