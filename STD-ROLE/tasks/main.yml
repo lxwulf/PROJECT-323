@@ -4,7 +4,7 @@
 - name: import tasks
   include_tasks: "{{ item }}"
   with_items:
-    - 01_update.yml
-    - 02_configfw.yml
+    - 01_update_system.yml
+    - 02_configure_firewall.yml
     - 03_network.yml
-    - 04_install_packages.yml
+    - 04_installing_packages.yml
