@@ -1,0 +1,19 @@
+---
+#configuration set for 8G RAM, 1 CPU, CON_NUM 49, HDD Type Storage
+
+con_num: 49
+sha_buffer: 2GB
+cache: 6GB
+maintenance_mem: 512MB
+checkpoint: 0.9
+wal_buffer: 16MB
+default_stat_targ: 100
+ran_page_cost: 1.1
+effect_io_con: 200
+work_mem: 10MB
+min_wal_size: 1GB
+max_wal_size: 4GB
+laddr: "'{{ ansible_default_ipv4['address'] }}'"
+lport: 5432
+pw_mode: scram-sha-256
+fsync_mode: True

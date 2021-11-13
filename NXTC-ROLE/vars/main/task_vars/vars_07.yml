@@ -1,0 +1,6 @@
+---
+
+#---------POSTGRESQL-SETTINGS---------
+#task 07_configure_postgresql.yml
+
+dbscript: cwdb-gen_v3.py

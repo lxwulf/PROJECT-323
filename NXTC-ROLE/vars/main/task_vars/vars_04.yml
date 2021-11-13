@@ -1,0 +1,32 @@
+---
+
+#package list for 04_installing_packages.yml
+packages:
+  - nginx
+  - postgresql-server
+  - postgresql-contrib
+  - postgresql-upgrade
+  - redis
+  - fail2ban
+  - php
+  - php-bcmath
+  - php-cli
+  - php-fpm
+  - php-gd
+  - php-gmp
+  - php-intl
+  - php-ldap
+  - php-mbstring
+  - php-mysqlnd
+  - php-opcache
+  - php-smbclient
+  - php-xml
+  - php-common
+  - php-pecl-apcu
+  - php-pecl-igbinary
+  - php-pecl-imagick
+  - php-pecl-redis5
+  - php-pecl-zip
+  - php-pear-Net-Curl
+  - certbot
+  - python3-certbot-nginx

@@ -5,3 +5,7 @@
     name: "{{ packages }}"
     state: present
   become: yes
+
+- name: installing psycopg2 for the dbscript
+  pip:
+    name: psycopg2-binary

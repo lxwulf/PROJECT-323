@@ -1,0 +1,7 @@
+---
+
+#settings for ntp server in 03_setup_ntp.yml
+ntp_server0: 0.ch.pool.ntp.org 
+ntp_server1: 1.ch.pool.ntp.org
+ntp_server2: 2.ch.pool.ntp.org
+ntp_server3: 3.ch.pool.ntp.org

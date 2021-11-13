@@ -1,0 +1,5 @@
+---
+
+#nginx settings in nginx.conf.j2
+locip: 127.0.0.1
+

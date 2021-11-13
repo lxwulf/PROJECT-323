@@ -1,0 +1,31 @@
+#=====================================
+#= ANSIBLE_PUSHED_CONFIGURATION_FILE =
+#=====================================
+#
+#====================
+#= Path             =
+#====================
+#
+#-----------------------
+#- /var/lib/pgsql/data -
+#-----------------------
+
+#pgsql settings
+max_connections = {{ con_num }}
+shared_buffers = {{ sha_buffer }}
+effective_cache_size = {{ cache }}
+maintenance_work_mem = {{ maintenance_mem }}
+checkpoint_completion_target = {{ checkpoint }}
+wal_buffers = {{ wal_buffer}}
+default_statistics_target = {{ default_stat_targ }}
+random_page_cost = {{ ran_page_cost }}
+effective_io_concurrency = {{ effect_io_con }}
+work_mem = {{ work_mem }}
+min_wal_size = {{ min_wal_size }}
+max_wal_size = {{ max_wal_size }}
+
+#additional settings
+listen_addresses = {{ laddr }}
+port = {{ lport }}
+password_encryption = {{ pw_mode }}
+fsync = {{ fsync_mode }}
