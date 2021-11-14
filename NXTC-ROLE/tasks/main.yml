@@ -10,3 +10,4 @@
     - 04_installing_packages.yml
     - 05_configure_nginx.yml
     - 06_configure_php.yml
+    - 07_configure_postgresql.yml
