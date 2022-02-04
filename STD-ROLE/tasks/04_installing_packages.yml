@@ -1,7 +1,0 @@
----
-
-- name: installing standard packages
-  dnf:
-    name: "{{ packages }}"
-    state: present
-  become: yes

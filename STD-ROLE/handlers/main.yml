@@ -1,6 +1,0 @@
----
-
-#handler for 01_update.yml
-- name: restart machine
-  reboot:
-  become: yes

@@ -1,9 +1,0 @@
----
-
-- name: open port 22
-  ansible.posix.firewalld:
-    service: ssh
-    permanent: yes
-    immediate: yes
-    state: enabled
-  become: yes
