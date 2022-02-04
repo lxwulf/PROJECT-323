@@ -1,7 +1,0 @@
----
-
-- name: SET UP STANDARD INSTALLATION
-  hosts: "{{ target }}"
-  strategy: mitogen_linear
-  roles:
-  - STD-ROLE
