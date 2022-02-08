@@ -7,7 +7,6 @@ packages:
   - postgresql-contrib
   - postgresql-upgrade
   - redis
-  - fail2ban
   - php
   - php-bcmath
   - php-cli
@@ -30,3 +29,4 @@ packages:
   - php-pear-Net-Curl
   - certbot
   - python3-certbot-nginx
+  - python3-pip

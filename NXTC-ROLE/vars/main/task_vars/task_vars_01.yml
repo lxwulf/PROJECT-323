@@ -1,5 +1,6 @@
 ---
 
 #settings for hostname and ip
-fqdn_name: nc01.cloudwulf.cf
+fqdn_name: private.cloudwulf.cf
 extip: 85.3.171.104
+hostname: private
