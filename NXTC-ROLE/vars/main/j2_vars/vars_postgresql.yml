@@ -1,19 +1,36 @@
 ---
-#configuration set for 8G RAM, 1 CPU, CON_NUM 49, HDD Type Storage
 
-con_num: 49
-sha_buffer: 2GB
-cache: 6GB
-maintenance_mem: 512MB
-checkpoint: 0.9
-wal_buffer: 16MB
-default_stat_targ: 100
-ran_page_cost: 1.1
-effect_io_con: 200
-work_mem: 10MB
+# DB Version: 13
+# OS Type: linux
+# DB Type: mixed
+# Total Memory (RAM): 4 GB
+# CPUs num: 4
+# Connections num: 50
+# Data Storage: hdd
+#-------------------------------------------------------
+#- powered by pgtune --> https://pgtune.leopard.in.ua/ -
+#-------------------------------------------------------
+
+max_connections: 50
+shared_buffers: 1GB
+effective_cache_size: 3GB
+maintenance_work_mem: 256MB
+checkpoint_completion_target: 0.9
+wal_buffers: 16MB
+default_statistics_target: 100
+random_page_cost: 4
+effective_io_concurrency: 2
+work_mem: 5242kB
+
 min_wal_size: 1GB
 max_wal_size: 4GB
-laddr: "'{{ ansible_default_ipv4['address'] }}'"
-lport: 5432
-pw_mode: scram-sha-256
+
+max_worker_processes: 4
+max_parallel_workers_per_gather: 2
+max_parallel_workers: 4
+max_parallel_maintenance_workers: 2
+
+listen_addresses: "'{{ ansible_default_ipv4['address'] }}'"
+pgsqlport: 5432
 fsync_mode: True
+password_encryption: trust #scram-sha-256
