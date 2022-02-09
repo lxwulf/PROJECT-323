@@ -2,7 +2,7 @@
 
 - name: copy configuration for php module opcache
   ansible.builtin.template:
-    src: templates/php/10-opcache.ini.j2
+    src: php/php.d/10-opcache.ini.j2
     dest: /etc/php.d/10-opcache.ini
     owner: root
     group: root
@@ -11,7 +11,7 @@
 
 - name: copy configuration for php module apcu
   ansible.builtin.template:
-    src: templates/php/40-apcu.ini.j2
+    src: php/php.d/40-apcu.ini.j2
     dest: /etc/php.d/40-apcu.ini
     owner: root
     group: root
@@ -20,7 +20,7 @@
 
 - name: copy configuration for php
   ansible.builtin.template:
-    src: templates/php/php.ini.j2
+    src: php/php.ini.j2
     dest: /etc/php.ini
     owner: root
     group: root
@@ -29,7 +29,7 @@
 
 - name: copy configuration for php-fpm/www.conf
   ansible.builtin.template:
-    src:  templates/php/www.conf.j2
+    src:  php/php-fpm.d/www.conf.j2
     dest: /etc/php-fpm.d/www.conf
     owner: root
     group: root
@@ -38,7 +38,7 @@
 
 - name: copy configuration for php-fpm
   ansible.builtin.template:
-    src:  templates/php/php-fpm.conf.j2
+    src:  php/php-fpm.conf.j2
     dest: /etc/php-fpm.conf
     owner: root
     group: root
