@@ -3,28 +3,8 @@
 - name: adding domain name in hosts (ipv4)
   ansible.builtin.lineinfile:
     path: /etc/hosts
-    regexp: '^127\.0\.0\.1'
-    line: 127.0.0.1 {{ fqdn_name }}
-    owner: root
-    group: root
-    mode: '0644'
-  become: yes
-
-- name: adding domain name in hosts (ipv6)
-  ansible.builtin.lineinfile:
-    path: /etc/hosts
-    regexp: '^::1'
-    line: ::1 {{ fqdn_name }}
-    owner: root
-    group: root
-    mode: '0644'
-  become: yes
-
-- name: adding external ip to domain in hosts (ext.ip)
-  ansible.builtin.lineinfile:
-    path: /etc/hosts
-    insertafter: '^::1'
-    line: "{{ extip }} {{ fqdn_name }}"
+    insertafter: '^127\.0\.0\.1'
+    line: '{{ extip }} {{ fqdn_name }} {{ hostname }}'
     owner: root
     group: root
     mode: '0644'
@@ -34,7 +14,7 @@
   ansible.builtin.lineinfile:
     path: /etc/hostname
     regexp: '.'
-    line: "{{ fqdn_name }}"
+    line: '{{ fqdn_name }}'
     owner: root
     group: root
     mode: '0644'
