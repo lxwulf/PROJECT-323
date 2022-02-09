@@ -11,21 +11,22 @@
 #-----------------------
 
 #pgsql settings
-max_connections = {{ con_num }}
-shared_buffers = {{ sha_buffer }}
-effective_cache_size = {{ cache }}
-maintenance_work_mem = {{ maintenance_mem }}
-checkpoint_completion_target = {{ checkpoint }}
-wal_buffers = {{ wal_buffer}}
-default_statistics_target = {{ default_stat_targ }}
-random_page_cost = {{ ran_page_cost }}
-effective_io_concurrency = {{ effect_io_con }}
+max_connections = {{ max_connections }}
+shared_buffers = {{ shared_buffers }}
+effective_cache_size = {{ effective_cache_size }}
+maintenance_work_mem = {{ maintenance_work_mem }}
+checkpoint_completion_target = {{ checkpoint_completion_target }}
+wal_buffers = {{ wal_buffers }}
+default_statistics_target = {{ default_statistics_target }}
+random_page_cost = {{ random_page_cost }}
+effective_io_concurrency = {{ effective_io_concurrency }}
 work_mem = {{ work_mem }}
 min_wal_size = {{ min_wal_size }}
 max_wal_size = {{ max_wal_size }}
 
 #additional settings
-listen_addresses = {{ laddr }}
-port = {{ lport }}
-password_encryption = {{ pw_mode }}
+listen_addresses = {{ listen_addresses }}
+port = {{ pgsqlport }}
 fsync = {{ fsync_mode }}
+
+#password_encryption = {{ password_encryption }}
