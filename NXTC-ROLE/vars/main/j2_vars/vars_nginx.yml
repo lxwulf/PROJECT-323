@@ -2,9 +2,5 @@
 
 #nginx settings in nginx.conf.j2
 
-fqdn_name: private.cloudwulf.cf
-extip: 85.3.171.104
-hostname: private
-
 max_age: 31536000
 client_max_body_size: 1024M
