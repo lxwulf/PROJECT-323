@@ -1,6 +1,6 @@
 # PROJECT-323
 
-This repository is depricated and would not receive any
+This repository is deprecated and would not receive any
 updates anymore. The new version with official release
 can be found here [CW-Role_v0.1.0](https://github.com/lxwulf/CW-ROLE)
 
